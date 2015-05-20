@@ -1,0 +1,23 @@
+{
+  "name": "scene-online-editor",
+  "version": "0.0.1",
+  "description": "Gestion de paquetes NPM",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orta-sanz/scene-online-editor.git"
+  },
+  "author": "Alejandro Orta Sanz",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/orta-sanz/scene-online-editor/issues"
+  },
+  "dependencies": {
+    "gulp": "~3.8.11",
+    "gulp-browserify": "~0.5.1",
+    "gulp-stylus": "~2.0.2",
+    "gulp-notify": "~2.2.0",
+    "nib": "~1.1.0",
+    "handlebars": "~3.0.3",
+    "jquery-browserify": "~1.8.1"
+  }
+}
