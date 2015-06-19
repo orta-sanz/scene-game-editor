@@ -2,7 +2,8 @@ var gulp        = require('gulp'),
 	nib         = require('nib'),
 	notify      = require('gulp-notify'),
 	browserify  = require('gulp-browserify'),
-	stylus      = require('gulp-stylus');
+	stylus      = require('gulp-stylus'),
+	livereload  = require('gulp-livereload');
 
 var watch = {
 	js  : './assets/**/*.js',
@@ -21,6 +22,7 @@ gulp.task('scripts', function() {
 			transform: ['hbsfy']
 		}))
 		.pipe(gulp.dest(dest.js))
+		.pipe(livereload())
 		.pipe(notify({
 			onLast  : true,
 			title   : 'Scripts',
@@ -36,6 +38,7 @@ gulp.task('stylus', function() {
 			'include css' : true
 		}))
 		.pipe(gulp.dest(dest.css))
+		.pipe(livereload())
 		.pipe(notify({
 			onLast   : true,
 			title    : 'Style',
@@ -44,6 +47,7 @@ gulp.task('stylus', function() {
 });
 
 gulp.task('default', function() {
+	livereload.listen();
 	gulp.watch(watch.js, ['scripts']);
 	gulp.watch(watch.styl, ['stylus']);
 });

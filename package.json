@@ -18,6 +18,8 @@
     "gulp-notify": "~2.2.0",
     "nib": "~1.1.0",
     "handlebars": "~3.0.3",
-    "jquery-browserify": "~1.8.1"
+    "jquery-browserify": "~1.8.1",
+    "gulp-livereload": "~3.8.0",
+    "underscore": "~1.8.3"
   }
 }
